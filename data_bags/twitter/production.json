@@ -1,0 +1,9 @@
+{
+  "id": "production",
+  "bravo.server.volgactf.org": {
+    "encrypted_data": "ry5DwekwJP9zH7KCOR+CfnXJyBiqf71rTejPVL85I/YdkPV/T6iPe0iCdnz9\nA25fMpQB3k7XnBavqr4Et+SnJDt2+xXZus6rC5po9Qz9zw8N/mRpnL/upb7f\n7JuqnHKUpT/KLTHR87lt5K0su8Cmq97/c7n5/HXRVRbLiiRHfrLYTxQY+Q+X\nDMLyh2AG2TISWL1K+14WXoYswVkJETshZhOTNCW/mRWuSeIuMdM04OJU8Tie\ndpKcEjBZSKm/GT553y16WRx2c3VdGa7SaXjC0X76SuyN7Gi0pWVJCQLwJ1ZD\nWYeW5Z96SlN4cFNNUc8+/ZDkCNZlQGHrQNa/WVbrQI6w8MTo6rma+u6X88ru\n7h0=\n",
+    "iv": "XxKPGVurtC3UV5UUIvYpaQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

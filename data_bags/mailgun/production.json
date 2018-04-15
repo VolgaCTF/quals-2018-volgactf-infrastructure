@@ -1,0 +1,9 @@
+{
+  "id": "production",
+  "bravo.server.volgactf.org": {
+    "encrypted_data": "4DApQcS3CBiHCsW9tBHUrk/Jru1Rj71Kh6OD8qnr0k+rw4FaA3unEs0yI0Is\njtjeKtFVcmhaj6P438exaZDceqdXiBFQL+bLyFI7nV2B6XJlqeqso/lC9hoh\nodkR98WN2Ff2sq2qGuZk37LerZUpgw==\n",
+    "iv": "opn9KvRI8bN6IKo01DkGig==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

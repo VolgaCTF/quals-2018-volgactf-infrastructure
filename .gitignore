@@ -1,0 +1,4 @@
+/cookbooks/
+.vagrant
+opts.yaml
+.env

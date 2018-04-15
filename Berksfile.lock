@@ -1,0 +1,171 @@
+DEPENDENCIES
+  build-essential
+  dhparam (~> 1.0.0)
+  dotfiles
+    git: https://github.com/aspyatkin/dotfiles-cookbook
+    revision: 5a1675c593b603fd4c0e6ce6b7ddd0076c662fe9
+    tag: v1.4.0
+  git2
+    git: https://github.com/aspyatkin/git2-cookbook
+    revision: 33e0d02179735822efe7b74f11e6274641644036
+    tag: v1.0.0
+  latest-git
+    git: https://github.com/aspyatkin/latest-git-cookbook
+    revision: cc1b997196c25a34d7df6f43853099d0878a5d7f
+    tag: v1.4.0
+  latest-nodejs
+    git: https://github.com/aspyatkin/latest-nodejs-cookbook
+    revision: 1f6c668d275d347846606bc5011d71375962a5c3
+    tag: v1.5.0
+  latest-postgres
+    git: https://github.com/aspyatkin/latest-postgres-cookbook
+    revision: 9a44beb09eaf051944f5d1550d46da85cec4dc61
+    tag: v0.2.0
+  latest-redis
+    git: https://github.com/aspyatkin/latest-redis-cookbook
+    revision: a474bcea8bc662288cfccea07914740ff010ce03
+    tag: v1.2.1
+  libmaxminddb
+    git: https://github.com/aspyatkin/libmaxminddb-cookbook
+    revision: 8ec69b55ee2e19b4d0922804216f1fce0168055c
+    tag: v0.1.0
+  locale (~> 2.0.1)
+  modern_nginx
+    git: https://github.com/aspyatkin/modern_nginx
+    revision: d117a1527953eb1587e2ca8731a4412d40994d32
+    tag: v2.11.0
+  ntp (~> 3.5.2)
+  poise-python (~> 1.6.0)
+  themis-quals
+    git: https://github.com/themis-project/themis-quals-cookbook
+    revision: 57aad313d41255996de48f9534c0fae096b640db
+    tag: v2.0.0
+  ufw (~> 3.1.0)
+
+GRAPH
+  apt (6.1.4)
+  ark (3.1.0)
+    build-essential (>= 0.0.0)
+    seven_zip (>= 0.0.0)
+    windows (>= 0.0.0)
+  build-essential (8.1.1)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
+  chef-sugar (4.0.0)
+  compat_resource (12.19.1)
+  database (6.1.1)
+    postgresql (>= 1.0.0)
+  dhparam (1.0.0)
+  dotfiles (1.4.0)
+    vim (~> 2.0.2)
+    zsh (~> 2.0.0)
+  firewall (2.6.3)
+    chef-sugar (>= 0.0.0)
+  git (8.0.1)
+    build-essential (>= 0.0.0)
+    homebrew (>= 0.0.0)
+  git2 (1.0.0)
+  graphicsmagick (0.1.0)
+  homebrew (5.0.4)
+  htpasswd (0.3.0)
+    poise-python (>= 0.0.0)
+  instance (2.0.0)
+  latest-git (1.4.0)
+    apt (>= 0.0.0)
+    git (~> 8.0.0)
+  latest-nodejs (1.5.0)
+    nodejs (~> 4.0.0)
+  latest-postgres (0.2.0)
+    instance (~> 2.0.0)
+    postgresql (~> 6.1.1)
+    secret (~> 1.0.0)
+  latest-redis (1.2.1)
+    redisio (~> 2.6.1)
+  libmaxminddb (0.1.0)
+    apt (>= 0.0.0)
+  locale (2.0.1)
+  logrotate (2.2.0)
+  mingw (2.0.2)
+    seven_zip (>= 0.0.0)
+  modern_nginx (2.11.0)
+    dhparam (~> 1.0.0)
+    logrotate (~> 2.2.0)
+    nginx (~> 8.1.2)
+  multipackage (3.0.30)
+    compat_resource (>= 0.0.0)
+  netdata (0.4.0)
+    apt (< 7.0.0)
+    compat_resource (~> 12.19.1)
+    yum-epel (< 3.0.0)
+  nginx (8.1.2)
+    build-essential (>= 0.0.0)
+    ohai (>= 4.1.0)
+    yum-epel (>= 0.0.0)
+    zypper (>= 0.0.0)
+  nodejs (4.0.0)
+    ark (>= 2.0.2)
+    build-essential (>= 0.0.0)
+    compat_resource (>= 12.16)
+  ntp (3.5.6)
+  ohai (5.2.2)
+  openssl (8.1.2)
+  patch (2.2.1)
+  poise (2.8.1)
+  poise-archive (1.5.0)
+    poise (~> 2.6)
+  poise-languages (2.1.1)
+    poise (~> 2.5)
+    poise-archive (~> 1.0)
+  poise-python (1.6.0)
+    poise (~> 2.7)
+    poise-languages (~> 2.0)
+  postgresql (6.1.1)
+    build-essential (>= 2.0.0)
+    compat_resource (>= 12.16.3)
+    openssl (>= 4.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  redisio (2.6.1)
+    build-essential (>= 0.0.0)
+    selinux_policy (>= 0.0.0)
+    ulimit (>= 0.1.2)
+  secret (1.0.0)
+    instance (~> 2.0.0)
+  selinux_policy (2.1.0)
+  seven_zip (2.0.2)
+    windows (>= 1.2.2)
+  ssh-private-keys (2.0.0)
+  ssh_known_hosts (4.0.0)
+  supervisor (0.4.12)
+    python (>= 0.0.0)
+  themis-quals (2.0.0)
+    database (~> 6.1.1)
+    git (~> 8.0.0)
+    git2 (~> 1.0.0)
+    graphicsmagick (~> 0.1.0)
+    htpasswd (~> 0.3.0)
+    instance (~> 2.0.0)
+    logrotate (~> 2.2.0)
+    netdata (~> 0.4.0)
+    nginx (~> 8.1.0)
+    nodejs (~> 4.0.0)
+    patch (~> 2.2.1)
+    poise-python (~> 1.6.0)
+    postgresql (~> 6.1.1)
+    secret (~> 1.0.0)
+    ssh-private-keys (~> 2.0.0)
+    ssh_known_hosts (~> 4.0.0)
+    supervisor (~> 0.4.12)
+    tls (~> 3.0.0)
+  tls (3.0.0)
+  ufw (3.1.1)
+    firewall (>= 2.0)
+  ulimit (1.0.0)
+  vim (2.0.2)
+  windows (4.1.4)
+  yum-epel (2.1.2)
+    compat_resource (>= 12.16.3)
+  zsh (2.0.0)
+    multipackage (~> 3.0)
+  zypper (0.4.0)

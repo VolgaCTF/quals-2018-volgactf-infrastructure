@@ -1,0 +1,110 @@
+{
+  "environment": "production",
+  "run_list": [
+    "recipe[locale::default]",
+    "recipe[build-essential::default]",
+    "recipe[ufw::default]",
+    "recipe[ntp::default]",
+    "recipe[poise-python::default]",
+    "recipe[latest-git::default]",
+    "recipe[dotfiles::default]",
+    "recipe[dhparam::default_key]",
+    "recipe[libmaxminddb::default]",
+    "recipe[modern_nginx::default]",
+    "recipe[latest-redis::default]",
+    "recipe[latest-nodejs::default]",
+    "recipe[latest-postgres::default]",
+    "recipe[themis-quals::default]",
+    "recipe[themis-quals::monitoring]"
+  ],
+  "automatic": {
+    "fqdn": "bravo.server.volgactf.org"
+  },
+  "build-essential": {
+    "compile_time": true
+  },
+  "firewall": {
+    "ufw": {
+      "defaults": {
+        "ipv6": "no",
+        "manage_builtins": "no",
+        "ipt_sysctl": "/etc/ufw/sysctl.conf",
+        "ipt_modules": "nf_conntrack_ftp nf_nat_ftp nf_conntrack_netbios_ns",
+        "policy": {
+          "input": "DROP",
+          "output": "ACCEPT",
+          "forward": "DROP",
+          "application": "SKIP"
+        }
+      }
+    },
+    "rules": [
+      {
+        "http": {
+          "port": 80,
+          "protocol": "tcp",
+          "source": "0.0.0.0/0"
+        }
+      },
+      {
+        "https": {
+          "port": 443,
+          "protocol": "tcp",
+          "source": "0.0.0.0/0"
+        }
+      }
+    ]
+  },
+  "modern_nginx": {
+    "with_geoip2": true
+  },
+  "themis-quals": {
+    "customizers": {
+      "quals-2018-volgactf-customizer": {
+        "github_repository": "VolgaCTF/quals-2018-volgactf-customizer",
+        "revision": "master"
+      }
+    },
+    "config": {
+      "customizer": "quals-2018-volgactf-customizer",
+      "fqdn": "quals.2018.volgactf.ru",
+      "secure": true,
+      "ec_certificates": true,
+      "email": {
+        "transport": "mailgun",
+        "enforce_address_validation": true,
+        "sender_name": "VolgaCTF 2018 Quals",
+        "sender_address": "info@quals.2018.volgactf.ru"
+      },
+      "notifications": {
+        "twitter": true,
+        "telegram": true
+      },
+      "backup": {
+        "enabled": true,
+        "cron": {
+          "minute": "0",
+          "hour": "*/2"
+        }
+      },
+      "cleanup_upload_dir": {
+        "enabled": true,
+        "cron": {
+          "minute": "*/30"
+        }
+      }
+    },
+    "processes": {
+      "app": 6,
+      "queue": 6
+    },
+    "monitoring": {
+      "fqdn": "netdata.bravo.server.volgactf.org",
+      "secure": true,
+      "ec_certificates": true,
+      "notifications": {
+        "telegram": true
+      }
+    }
+  }
+}
